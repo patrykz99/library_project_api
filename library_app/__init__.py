@@ -1,12 +1,15 @@
 from flask import Flask
 from config import Config
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
 
-@app.route('/')
-def home():
-    return '<h1> Test </h1>'
-    
-    
+db = SQLAlchemy(app)
+migrate = Migrate(app,db)
+
+from library_app import authors
+from library_app import models
