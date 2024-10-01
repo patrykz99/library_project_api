@@ -11,4 +11,5 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 
+from library_app.models import Author
 from library_app import db_commands
