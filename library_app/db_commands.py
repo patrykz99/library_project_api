@@ -1,5 +1,6 @@
 from library_app import app,db
 from library_app.models import Author
+from sqlalchemy import text
 from pathlib import Path
 from datetime import datetime
 import json
@@ -12,7 +13,7 @@ def db_commands():
 
 @db_commands.command()
 def add_data():
-    '''Add data to the database'''
+    '''Add all data from file (JSON) to the table'''
     try:
         json_path = Path(__file__).parent /'data'/'authors.json'
         with open(json_path) as file:
@@ -28,5 +29,11 @@ def add_data():
 
 @db_commands.command()
 def remove_data():
-    '''Remove data from the database'''
-    pass
+    '''Remove all data from the table'''
+    try:
+        db.session.execute(text(f'TRUNCATE TABLE {Author.__tablename__}'))
+        db.session.execute(text(f"ALTER SEQUENCE {Author.__tablename__}_id_seq RESTART WITH 1;"))
+        db.session.commit()
+        print('Data has been removed succesfully') 
+    except Exception as err:
+        print(f'Got an unexpected error: {err}')
