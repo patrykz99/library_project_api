@@ -31,8 +31,9 @@ def add_data():
 def remove_data():
     '''Remove all data from the table'''
     try:
+        
         db.session.execute(text(f'TRUNCATE TABLE {Author.__tablename__}'))
-        db.session.execute(text(f"ALTER SEQUENCE {Author.__tablename__}_id_seq RESTART WITH 1;"))
+        db.session.execute(text(f"ALTER SEQUENCE {Author.__tablename__}_id_seq RESTART WITH 1;")) #Alternatively TRUNCATE TABLE {Author.__tablename__} RESTART IDENTITY;
         db.session.commit()
         print('Data has been removed succesfully') 
     except Exception as err:
