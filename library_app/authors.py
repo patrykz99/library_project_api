@@ -1,22 +1,26 @@
 from library_app import app
-from flask import jsonify,request
+from flask import jsonify
+from library_app.models import Author,Author_Schema,author_schema
+
 
 
 
 @app.route('/api/ver1/authors')
 def get_authors():
+    author = Author.query.all()
+    author_schema_list = Author_Schema(many=True)
     return jsonify({
         'success':True,
-        'data': '"testing" GET DATA OF AUTHORS'
+        'data': author_schema_list.dump(author),
+        'amount':len(author)
     })
     
 @app.route('/api/ver1/authors/<int:author_id>')
 def get_author(author_id):
-    
-    # if data[author_id] == author_id:
+    author = Author.query.get_or_404(author_id,description=f'No author with id {author_id} in the database')
     return jsonify({
-        'success':True,
-        'data': f'"testing" GET DATA OF AUTHOR {author_id}'
+        'success':True, 
+        'data': author_schema.dump(author)
     })
     
 @app.route('/api/ver1/authors',methods=['POST'])
