@@ -14,3 +14,4 @@ migrate = Migrate(app,db)
 from library_app.models import Author
 from library_app import db_commands
 from library_app import authors
+from library_app import errors
