@@ -1,7 +1,8 @@
-from library_app import app
+from library_app import app,db
 from flask import jsonify
 from library_app.models import Author,Author_Schema,author_schema
-
+from webargs.flaskparser import use_args
+from library_app.utils import validate_content_type_json
 
 
 
@@ -24,25 +25,39 @@ def get_author(author_id):
     })
     
 @app.route('/api/ver1/authors',methods=['POST'])
-def add_author():
+@validate_content_type_json
+@use_args(author_schema,error_status_code=400)
+def add_author(args:dict): 
+    author = Author(**args)
+    db.session.add(author)
+    db.session.commit()
     
     return jsonify({
         'success':True,
-        'data': '"testing" ADDED NEW AUTHOR'
+        'data': args
     }),201
     
 @app.route('/api/ver1/authors/<int:author_id>',methods=['PUT'])
-def update_author(author_id):
+@validate_content_type_json
+@use_args(author_schema,error_status_code=400)
+def update_author(args: dict, author_id: int):
+    author = Author.query.get_or_404(author_id,description=f'No author with id {author_id} in the database')
+    author.first_name = args['first_name']
+    author.first_name = args['last_name']
+    author.first_name = args['date_of_birth']
     
+    db.session.commit()
     return jsonify({
         'success':True,
-        'data': f'"testing" UPDATED DATA OF AUTHOR {author_id}'
-    })
+        'data': author_schema.dump(author)
+    }),200
     
 @app.route('/api/ver1/authors/<int:author_id>',methods=['DELETE'])
 def delete_author(author_id):
-     
+    author = Author.query.get_or_404(author_id,description=f'No author with id {author_id} in the database') 
+    db.session.delete(author)
+    db.session.commit()
     return jsonify({
         'success':True,
-        'data': f'"testing" DELETED DATA OF AUTHOR {author_id}'
+        'data': f'Author with id {author_id} was deleted from the database'
     })
