@@ -2,6 +2,7 @@ from library_app import db
 from marshmallow import Schema, fields,validate,validates,ValidationError
 from datetime import datetime
 from werkzeug.exceptions import BadRequest
+from flask_sqlalchemy import query
 
 class Author(db.Model):
     __tablename__ = "authors"
@@ -19,14 +20,30 @@ class Author(db.Model):
             'many':True
         }
         if field:
-            if field.split(',') not in  list(Author.__table__.columns.keys()):
+            print(field.split(','))
+            if all(field in Author.__table__.columns.keys() for field in field.split(',')):    
+                schema_params['only']= [p for p in field.split(',') if p in Author.__table__.columns]
+            else:
                 raise BadRequest(description=f'Invalid value in fields: {",".join(field.split(","))}')
-            schema_params['only']= [p for p in field.split(',') if p in Author.__table__.columns]
             
         return schema_params
+    @staticmethod
+    def sort_data(qry: query,sort_keys= None):
+        if sort_keys:
+            for key in sort_keys.split(','):
+                desc = False
+                if key.startswith('-'):
+                    key = key[1:]
+                    desc = True
+                column_attr = getattr(Author,key,None)
+                if column_attr is not None:
+                    qry = qry.order_by(column_attr.desc() if desc else qry.order_by(column_attr))
+            return qry
+        else:
+            return Author.query
+            
         
         
-
 class Author_Schema(Schema):
     id = fields.Int(dump_only = True)
     first_name = fields.String(required=True,validate=validate.Length(max=50))
