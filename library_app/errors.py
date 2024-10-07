@@ -21,6 +21,9 @@ def error_not_found(e):
 
 @app.errorhandler(400)
 def error_bad_request(e):
+    if 'fields' in e.description:
+        return ErrorResponse(e.description,400).to_response() 
+    print(e)    
     error_message = e.data.get('messages',{}).get('json',{})
     return ErrorResponse(error_message,400).to_response()
 

@@ -1,5 +1,5 @@
 from library_app import app,db
-from flask import jsonify
+from flask import jsonify,request
 from library_app.models import Author,Author_Schema,author_schema
 from webargs.flaskparser import use_args
 from library_app.utils import validate_content_type_json
@@ -9,7 +9,8 @@ from library_app.utils import validate_content_type_json
 @app.route('/api/ver1/authors')
 def get_authors():
     author = Author.query.all()
-    author_schema_list = Author_Schema(many=True)
+    schema_params = Author.get_schema_params(request.args.get('fields'))
+    author_schema_list = Author_Schema(**schema_params)
     return jsonify({
         'success':True,
         'data': author_schema_list.dump(author),

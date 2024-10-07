@@ -1,6 +1,7 @@
 from library_app import db
 from marshmallow import Schema, fields,validate,validates,ValidationError
 from datetime import datetime
+from werkzeug.exceptions import BadRequest
 
 class Author(db.Model):
     __tablename__ = "authors"
@@ -11,6 +12,20 @@ class Author(db.Model):
     
     def __repr__(self) -> str:
         return f'<{self.__class__.__name__}>: {self.first_name} {self.last_name}'
+    
+    @staticmethod
+    def get_schema_params(field: str):
+        schema_params = {
+            'many':True
+        }
+        if field:
+            if field.split(',') not in  list(Author.__table__.columns.keys()):
+                raise BadRequest(description=f'Invalid value in fields: {",".join(field.split(","))}')
+            schema_params['only']= [p for p in field.split(',') if p in Author.__table__.columns]
+            
+        return schema_params
+        
+        
 
 class Author_Schema(Schema):
     id = fields.Int(dump_only = True)
