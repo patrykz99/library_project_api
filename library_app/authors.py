@@ -8,13 +8,14 @@ from library_app.utils import validate_content_type_json
 
 @app.route('/api/ver1/authors')
 def get_authors():
-    author = Author.query.all()
+    author = Author.sort_data(Author.query,request.args.get('sort'))
     schema_params = Author.get_schema_params(request.args.get('fields'))
+    authors = author.all()
     author_schema_list = Author_Schema(**schema_params)
     return jsonify({
         'success':True,
-        'data': author_schema_list.dump(author),
-        'amount':len(author)
+        'data': author_schema_list.dump(authors),
+        'amount':len(authors)
     })
     
 @app.route('/api/ver1/authors/<int:author_id>')
