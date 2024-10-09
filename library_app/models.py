@@ -3,6 +3,9 @@ from marshmallow import Schema, fields,validate,validates,ValidationError
 from datetime import datetime
 from werkzeug.exceptions import BadRequest
 from flask_sqlalchemy import query
+from flask import request,url_for
+from config import Config
+from typing import Tuple
 
 class Author(db.Model):
     __tablename__ = "authors"
@@ -20,7 +23,6 @@ class Author(db.Model):
             'many':True
         }
         if field:
-            print(field.split(','))
             if all(field in Author.__table__.columns.keys() for field in field.split(',')):    
                 schema_params['only']= [p for p in field.split(',') if p in Author.__table__.columns]
             else:
@@ -41,8 +43,37 @@ class Author(db.Model):
             return qry
         else:
             return Author.query
-            
+    @staticmethod
+    def filter_data(qry:query, params):
+        for key, value in params.items():
+            if key not in ('key','fields','page','limit'):
+                column = getattr(Author,key,None)
+                if column is not None:
+                    if key == 'date_of_birth':
+                        try:
+                            value = datetime.strptime(value,'%d-%m-%Y').date()
+                        except ValueError:
+                            continue                       
+                    qry = qry.filter(column == value)   
+        return qry           
+    @staticmethod
+    def make_pagination(qry:query) -> Tuple[list,dict]:
+        page = request.args.get('page',1,type=int)  
+        limit = request.args.get('limit',Config.PAGE_LIMIT_DEFAULT,type=int)  
+        params = {key:value for key, value in request.args.items() if key != 'page'}
+        paginate_obj = qry.paginate(page = page, per_page = limit,error_out = False)
+        pagination={
+            'total_pages':paginate_obj.pages,
+            'total_records':paginate_obj.total,
+            'current_page':url_for('get_authors',page=page, **params),
+        }
         
+        if paginate_obj.has_prev:
+            pagination['prev_page'] = url_for('get_authors',page=page-1, **params)
+        if paginate_obj.has_next:
+            pagination['next_page'] = url_for('get_authors',page=page+1, **params)
+            
+        return paginate_obj.items,pagination
         
 class Author_Schema(Schema):
     id = fields.Int(dump_only = True)

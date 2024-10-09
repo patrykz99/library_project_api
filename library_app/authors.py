@@ -9,13 +9,16 @@ from library_app.utils import validate_content_type_json
 @app.route('/api/ver1/authors')
 def get_authors():
     author = Author.sort_data(Author.query,request.args.get('sort'))
+    author = Author.filter_data(author,request.args) 
     schema_params = Author.get_schema_params(request.args.get('fields'))
-    authors = author.all()
+    items_page, pagination = Author.make_pagination(author)
+    #authors = author.all() -> items variable
     author_schema_list = Author_Schema(**schema_params)
     return jsonify({
         'success':True,
-        'data': author_schema_list.dump(authors),
-        'amount':len(authors)
+        'data': author_schema_list.dump(items_page),
+        'amount':len(items_page),
+        'pagination': pagination
     })
     
 @app.route('/api/ver1/authors/<int:author_id>')
@@ -38,6 +41,7 @@ def add_author(args:dict):
         'success':True,
         'data': args
     }),201
+    
     
 @app.route('/api/ver1/authors/<int:author_id>',methods=['PUT'])
 @validate_content_type_json
