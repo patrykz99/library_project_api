@@ -61,17 +61,17 @@ class Author(db.Model):
         page = request.args.get('page',1,type=int)  
         limit = request.args.get('limit',Config.PAGE_LIMIT_DEFAULT,type=int)  
         params = {key:value for key, value in request.args.items() if key != 'page'}
-        paginate_obj = qry.paginate(page = page, per_page = limit,error_out = False)
+        paginate_obj = qry.paginate(page = page, per_page = limit)
         pagination={
             'total_pages':paginate_obj.pages,
             'total_records':paginate_obj.total,
-            'current_page':url_for('get_authors',page=page, **params),
+            'current_page':url_for('authors.get_authors',page=page, **params),
         }
         
         if paginate_obj.has_prev:
-            pagination['prev_page'] = url_for('get_authors',page=page-1, **params)
+            pagination['prev_page'] = url_for('authors.get_authors',page=page-1, **params)
         if paginate_obj.has_next:
-            pagination['next_page'] = url_for('get_authors',page=page+1, **params)
+            pagination['next_page'] = url_for('authors.get_authors',page=page+1, **params)
             
         return paginate_obj.items,pagination
         
