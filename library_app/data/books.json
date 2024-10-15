@@ -1,0 +1,304 @@
+[
+  {
+    "title": "The Witches",
+    "isbn": 9780141365473,
+    "number_of_pages": 208,
+    "description": "A young boy and his Norwegian grandmother battle the Grand High Witch in Roald Dahl's classic story.",
+    "author_id": 3
+  },
+  {
+    "title": "Slaughterhouse-Five",
+    "isbn": 9780385333849,
+    "number_of_pages": 275,
+    "description": "A science fiction novel that blends the horrors of World War II with surreal elements, following Billy Pilgrim’s experiences.",
+    "author_id": 2
+  },
+  {
+    "title": "Harry Potter and the Goblet of Fire",
+    "isbn": 9780439139601,
+    "number_of_pages": 734,
+    "description": "Harry's fourth year at Hogwarts involves a deadly competition and a rising dark power.",
+    "author_id": 3
+  },
+  {
+    "title": "War and Peace",
+    "isbn": 9781400079988,
+    "number_of_pages": 1225,
+    "description": "A vast epic centered around the events of the Napoleonic Wars and the lives affected by it.",
+    "author_id": 4
+  },
+  {
+    "title": "Pride and Prejudice",
+    "isbn": 9780141040349,
+    "number_of_pages": 480,
+    "description": "Jane Austen's timeless romantic novel about Elizabeth Bennet and Mr. Darcy.",
+    "author_id": 5
+  },
+  {
+    "title": "Crime and Punishment",
+    "isbn": 9780143107637,
+    "number_of_pages": 576,
+    "description": "Dostoevsky's psychological masterpiece about crime, guilt, and redemption.",
+    "author_id": 6
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "isbn": 9780060883287,
+    "number_of_pages": 417,
+    "description": "The story of seven generations of the Buendía family in the fictional town of Macondo.",
+    "author_id": 7
+  },
+  {
+    "title": "To the Lighthouse",
+    "isbn": 9780156907392,
+    "number_of_pages": 209,
+    "description": "A novel exploring themes of loss, subjectivity, and time, centered around the Ramsay family.",
+    "author_id": 8
+  },
+  {
+    "title": "The War of the Worlds",
+    "isbn": 9780553213387,
+    "number_of_pages": 192,
+    "description": "H.G. Wells' classic tale of Martian invasion and human survival.",
+    "author_id": 9
+  },
+  {
+    "title": "Kafka on the Shore",
+    "isbn": 9781400079278,
+    "number_of_pages": 467,
+    "description": "A surreal exploration of memory, consciousness, and fate, blending magical realism and Japanese folklore.",
+    "author_id": 10
+  },
+  {
+    "title": "The House of the Spirits",
+    "isbn": 9780553383808,
+    "number_of_pages": 490,
+    "description": "The life and loves of the Trueba family, tracing four generations of political and personal struggles.",
+    "author_id": 11
+  },
+  {
+    "title": "Murder on the Orient Express",
+    "isbn": 9780062693662,
+    "number_of_pages": 256,
+    "description": "A detective mystery featuring Hercule Poirot, set on a luxurious European train.",
+    "author_id": 12
+  },
+  {
+    "title": "The Shining",
+    "isbn": 9780307743657,
+    "number_of_pages": 688,
+    "description": "A chilling story about a family staying in a haunted hotel during the winter season.",
+    "author_id": 13
+  },
+  {
+    "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
+    "isbn": 9781338635171,
+    "number_of_pages": 528,
+    "description": "Prequel to the Hunger Games, focusing on Coriolanus Snow as a young man.",
+    "author_id": 14
+  },
+  {
+    "title": "The Da Vinci Code",
+    "isbn": 9780307474278,
+    "number_of_pages": 489,
+    "description": "A Harvard professor uncovers a conspiracy hidden within works of art and religious texts.",
+    "author_id": 15
+  },
+  {
+    "title": "The Almost Moon",
+    "isbn": 9780316067386,
+    "number_of_pages": 291,
+    "description": "A dark novel about a daughter confronting her difficult relationship with her mother.",
+    "author_id": 16
+  },
+  {
+    "title": "Adventures of Huckleberry Finn",
+    "isbn": 9780486280615,
+    "number_of_pages": 366,
+    "description": "The story of Huck Finn and his adventures along the Mississippi River.",
+    "author_id": 17
+  },
+  {
+    "title": "Great Expectations",
+    "isbn": 9780141439563,
+    "number_of_pages": 512,
+    "description": "The journey of young Pip, an orphan, through growth and development into adulthood.",
+    "author_id": 18
+  },
+  {
+    "title": "The Hobbit",
+    "isbn": 9780261103344,
+    "number_of_pages": 310,
+    "description": "The prequel to Lord of the Rings, telling the story of Bilbo Baggins' adventures.",
+    "author_id": 19
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "isbn": 9780385490814,
+    "number_of_pages": 311,
+    "description": "A dystopian novel set in a totalitarian society where women have lost most of their rights.",
+    "author_id": 20
+  },
+  {
+    "title": "The Trial",
+    "isbn": 9780805209990,
+    "number_of_pages": 304,
+    "description": "A nightmarish, surreal novel about a man arrested and prosecuted by a mysterious authority.",
+    "author_id": 21
+  },
+  {
+    "title": "I Know Why the Caged Bird Sings",
+    "isbn": 9780345514400,
+    "number_of_pages": 289,
+    "description": "Maya Angelou's autobiography recounting her early life and experiences with racism and identity.",
+    "author_id": 22
+  },
+  {
+    "title": "Beloved",
+    "isbn": 9781400033416,
+    "number_of_pages": 324,
+    "description": "A powerful novel about an escaped slave and the haunting presence of her dead child.",
+    "author_id": 23
+  },
+  {
+    "title": "Fahrenheit 451",
+    "isbn": 9781451673319,
+    "number_of_pages": 194,
+    "description": "A dystopian novel about a future where books are banned and 'firemen' burn them.",
+    "author_id": 24
+  },
+  {
+    "title": "Brave New World",
+    "isbn": 9780060850524,
+    "number_of_pages": 288,
+    "description": "A futuristic novel where technological advancements control every aspect of human life.",
+    "author_id": 25
+  },
+  {
+    "title": "A Game of Thrones",
+    "isbn": 9780553103540,
+    "number_of_pages": 694,
+    "description": "The first book in the Song of Ice and Fire series, exploring the power struggles in Westeros.",
+    "author_id": 26
+  },
+  {
+    "title": "Never Let Me Go",
+    "isbn": 9781400078776,
+    "number_of_pages": 288,
+    "description": "A dystopian novel about clones raised for organ donation, grappling with their fate.",
+    "author_id": 27
+  },
+  {
+    "title": "American Gods",
+    "isbn": 9780062472107,
+    "number_of_pages": 480,
+    "description": "A story blending ancient mythology and modern America, following Shadow and his mysterious employer.",
+    "author_id": 28
+  },
+  {
+    "title": "The Alchemist",
+    "isbn": 9780062315008,
+    "number_of_pages": 208,
+    "description": "A spiritual quest across the desert in search of treasure and deeper meaning.",
+    "author_id": 29
+  },
+  {
+    "title": "Blood Meridian",
+    "isbn": 9780679728757,
+    "number_of_pages": 368,
+    "description": "A violent and philosophical novel about a young man's journey with a murderous gang in the American West.",
+    "author_id": 30
+  },
+  {
+    "title": "The Witcher: Sword of Destiny",
+    "isbn": 9780316438979,
+    "number_of_pages": 384,
+    "description": "A collection of short stories following Geralt of Rivia, a monster hunter in a world of magic and danger.",
+    "author_id": 31
+  },
+  {
+    "title": "Drive Your Plow Over the Bones of the Dead",
+    "isbn": 9780811225946,
+    "number_of_pages": 288,
+    "description": "A mysterious tale of an elderly woman and a series of deaths in a small Polish village.",
+    "author_id": 32
+  },
+  {
+    "title": "The Tell-Tale Heart",
+    "isbn": 9781512104377,
+    "number_of_pages": 24,
+    "description": "A classic short story of psychological horror, narrating a murderer's descent into madness.",
+    "author_id": 33
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "isbn": 9780141442464,
+    "number_of_pages": 254,
+    "description": "A gothic novel about a man whose portrait ages instead of him, reflecting his moral corruption.",
+    "author_id": 34
+  },
+  {
+    "title": "The Sound and the Fury",
+    "isbn": 9780679732240,
+    "number_of_pages": 448,
+    "description": "A complex narrative of the fall of a Southern family, told in multiple perspectives.",
+    "author_id": 35
+  },
+  {
+    "title": "1984",
+    "isbn": 9780451524935,
+    "number_of_pages": 328,
+    "description": "Orwell’s dystopian novel about a totalitarian regime and the dangers of government surveillance.",
+    "author_id": 36
+  },
+  {
+    "title": "A Farewell to Arms",
+    "isbn": 9780684801469,
+    "number_of_pages": 355,
+    "description": "A love story set during World War I, following an American ambulance driver and a British nurse.",
+    "author_id": 37
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "isbn": 9780316769488,
+    "number_of_pages": 277,
+    "description": "J.D. Salinger's classic novel about teenage rebellion, following the troubled Holden Caulfield as he wanders New York City.",
+    "author_id": 38
+  },
+  {
+    "title": "Franny and Zooey",
+    "isbn": 9780316769495,
+    "number_of_pages": 201,
+    "description": "A story about the members of the Glass family and their spiritual journeys, written with Salinger's unique narrative voice.",
+    "author_id": 38
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "isbn": 9780061120084,
+    "number_of_pages": 336,
+    "description": "Harper Lee's Pulitzer Prize-winning novel about race, injustice, and moral growth in the American South, as seen through the eyes of young Scout Finch.",
+    "author_id": 39
+  },
+  {
+    "title": "Go Set a Watchman",
+    "isbn": 9780062409850,
+    "number_of_pages": 288,
+    "description": "A sequel to 'To Kill a Mockingbird', this novel follows Scout Finch as an adult returning to her hometown of Maycomb, Alabama, where she must grapple with personal and societal changes.",
+    "author_id": 39
+  },
+  {
+    "title": "White Teeth",
+    "isbn": 9780375703867,
+    "number_of_pages": 448,
+    "description": "Zadie Smith's debut novel, a sprawling multicultural epic set in London, weaving together the lives of two families over several decades.",
+    "author_id": 40
+  },
+  {
+    "title": "On Beauty",
+    "isbn": 9780143037743,
+    "number_of_pages": 464,
+    "description": "A novel about family dynamics, identity, and the clash between liberal and conservative values, loosely inspired by E.M. Forster's 'Howard's End'.",
+    "author_id": 40
+  }
+
+]
