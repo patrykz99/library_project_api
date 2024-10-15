@@ -1,0 +1,202 @@
+[
+  {
+    "first_name": "Roald",
+    "last_name": "Dahl",
+    "date_of_birth": "13-09-1916"
+  },
+  {
+    "first_name": "Kurt",
+    "last_name": "Vonnegut",
+    "date_of_birth": "11-11-1922"
+  },
+  {
+    "first_name": "J.K.",
+    "last_name": "Rowling",
+    "date_of_birth": "31-07-1965"
+  },
+  {
+    "first_name": "Leo",
+    "last_name": "Tolstoy",
+    "date_of_birth": "09-09-1828"
+  },
+  {
+    "first_name": "Jane",
+    "last_name": "Austen",
+    "date_of_birth": "16-12-1775"
+  },
+  {
+    "first_name": "Fyodor",
+    "last_name": "Dostoevsky",
+    "date_of_birth": "11-11-1821"
+  },
+  {
+    "first_name": "Gabriel",
+    "last_name": "Garcia Marquez",
+    "date_of_birth": "06-03-1927"
+  },
+  {
+    "first_name": "Virginia",
+    "last_name": "Woolf",
+    "date_of_birth": "25-01-1882"
+  },
+  {
+    "first_name": "H.G.",
+    "last_name": "Wells",
+    "date_of_birth": "21-09-1866"
+  },
+  {
+    "first_name": "Haruki",
+    "last_name": "Murakami",
+    "date_of_birth": "12-01-1949"
+  },
+  {
+    "first_name": "Isabel",
+    "last_name": "Allende",
+    "date_of_birth": "02-08-1942"
+  },
+  {
+    "first_name": "Agatha",
+    "last_name": "Christie",
+    "date_of_birth": "15-09-1890"
+  },
+  {
+    "first_name": "Stephen",
+    "last_name": "King",
+    "date_of_birth": "21-09-1947"
+  },
+  {
+    "first_name": "Suzanne",
+    "last_name": "Collins",
+    "date_of_birth": "11-08-1962"
+  },
+  {
+    "first_name": "Dan",
+    "last_name": "Brown",
+    "date_of_birth": "22-06-1964"
+  },
+  {
+    "first_name": "Alice",
+    "last_name": "Sebold",
+    "date_of_birth": "06-09-1963"
+  },
+  {
+    "first_name": "Mark",
+    "last_name": "Twain",
+    "date_of_birth": "30-11-1835"
+  },
+  {
+    "first_name": "Charles",
+    "last_name": "Dickens",
+    "date_of_birth": "07-02-1812"
+  },
+  {
+    "first_name": "J.R.R.",
+    "last_name": "Tolkien",
+    "date_of_birth": "03-01-1892"
+  },
+  {
+    "first_name": "Margaret",
+    "last_name": "Atwood",
+    "date_of_birth": "18-11-1939"
+  },
+  {
+    "first_name": "Franz",
+    "last_name": "Kafka",
+    "date_of_birth": "03-07-1883"
+  },
+  {
+    "first_name": "Maya",
+    "last_name": "Angelou",
+    "date_of_birth": "04-04-1928"
+  },
+  {
+    "first_name": "Toni",
+    "last_name": "Morrison",
+    "date_of_birth": "18-02-1931"
+  },
+  {
+    "first_name": "Ray",
+    "last_name": "Bradbury",
+    "date_of_birth": "22-08-1920"
+  },
+  {
+    "first_name": "Aldous",
+    "last_name": "Huxley",
+    "date_of_birth": "26-07-1894"
+  },
+  {
+    "first_name": "George",
+    "last_name": "R.R. Martin",
+    "date_of_birth": "20-09-1948"
+  },
+  {
+    "first_name": "Kazuo",
+    "last_name": "Ishiguro",
+    "date_of_birth": "08-11-1954"
+  },
+  {
+    "first_name": "Neil",
+    "last_name": "Gaiman",
+    "date_of_birth": "10-11-1960"
+  },
+  {
+    "first_name": "Paulo",
+    "last_name": "Coelho",
+    "date_of_birth": "24-08-1947"
+  },
+  {
+    "first_name": "Cormac",
+    "last_name": "McCarthy",
+    "date_of_birth": "20-07-1933"
+  },
+  {
+    "first_name": "Andrzej",
+    "last_name": "Sapkowski",
+    "date_of_birth": "21-06-1948"
+  },
+  {
+    "first_name": "Olga",
+    "last_name": "Tokarczuk",
+    "date_of_birth": "29-01-1962"
+  },
+  {
+    "first_name": "Edgar",
+    "last_name": "Allan Poe",
+    "date_of_birth": "19-01-1809"
+  },
+  {
+    "first_name": "Oscar",
+    "last_name": "Wilde",
+    "date_of_birth": "16-10-1854"
+  },
+  {
+    "first_name": "William",
+    "last_name": "Faulkner",
+    "date_of_birth": "25-09-1897"
+  },
+  {
+    "first_name": "George",
+    "last_name": "Orwell",
+    "date_of_birth": "25-06-1903"
+  },
+  {
+    "first_name": "Ernest",
+    "last_name": "Hemingway",
+    "date_of_birth": "21-07-1899"
+  },
+  {
+    "first_name": "J.D.",
+    "last_name": "Salinger",
+    "date_of_birth": "01-01-1919"
+  },
+  {
+    "first_name": "Harper",
+    "last_name": "Lee",
+    "date_of_birth": "28-04-1926"
+  },
+  {
+    "first_name": "Zadie",
+    "last_name": "Smith",
+    "date_of_birth": "25-10-1975"
+  }
+]
