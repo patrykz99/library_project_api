@@ -79,7 +79,7 @@ class Author(db.Model):
 class Book(db.Model):
     __tablename__ = "books"
     id = db.Column(db.Integer, primary_key = True)
-    title = db.Column(db.String(50),nullable=False)
+    title = db.Column(db.String(100),nullable=False)
     isbn = db.Column(db.BigInteger,nullable=False,unique=True)
     number_of_pages = db.Column(db.Integer,nullable=False)
     description = db.Column(db.String(250))
