@@ -2,16 +2,16 @@ from library_app import db
 from flask import jsonify,request
 from library_app.models import Author,Author_Schema,author_schema
 from webargs.flaskparser import use_args
-from library_app.utils import validate_content_type_json
+from library_app.utils import validate_content_type_json,get_schema_params,sort_data,filter_data,make_pagination
 from library_app.authors import authors_blueprint
 
 
 @authors_blueprint.route('/authors')
 def get_authors():
-    author = Author.sort_data(Author.query,request.args.get('sort'))
-    author = Author.filter_data(author,request.args) 
-    schema_params = Author.get_schema_params(request.args.get('fields'))
-    items_page, pagination = Author.make_pagination(author)
+    author = sort_data(Author,Author.query)
+    author = filter_data(Author,author) 
+    schema_params = get_schema_params(Author)
+    items_page, pagination = make_pagination(author,'authors.get_authors')
     #authors = author.all() -> items variable
     author_schema_list = Author_Schema(**schema_params)
     return jsonify({
