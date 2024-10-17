@@ -1,6 +1,6 @@
 # Project Title
-
-<h3>Book's library</h3>
+<h3 style="width:50%;font-size:32px;color:red;border:solid #ffffff 1px;">Project in progress on branch: <strong>dev!!!</strong></h3>
+<h3 >Book's library</h3>
 
 ## Table of Contents
 
@@ -11,7 +11,7 @@
 
 ## About <a name = "about"></a>
 
-<h3>(In progress)</h3>
+<h3>Backend's project about managment authors, books and authentication.</h3>
 
 ## Getting Started <a name = "getting_started"></a>
 
