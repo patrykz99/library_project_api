@@ -18,9 +18,11 @@ def build_app(config_cls = Config):
     
     #import blueprints
     from library_app.authors import authors_blueprint
+    from library_app.books import books_blueprint
     from library_app.commands import db_commands_blueprint
     from library_app.errors import errors_blueprint
     app.register_blueprint(authors_blueprint,url_prefix='/api/ver1')
+    app.register_blueprint(books_blueprint,url_prefix='/api/ver1')
     app.register_blueprint(db_commands_blueprint)
     app.register_blueprint(errors_blueprint)
     
