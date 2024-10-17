@@ -71,4 +71,4 @@ class Book_Schema(Schema):
                 raise ValidationError('ISBN field must contains 13 digits.')
                 
         
-author_schema = Author_Schema()
+author_schema,book_schema = Author_Schema(),Book_Schema()
