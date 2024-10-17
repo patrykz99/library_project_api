@@ -43,7 +43,7 @@ def filter_data(model:DefaultMeta, qry:query):
         if key not in ('key','fields','page','limit'):
             column = getattr(model,key,None)
             if column is not None:
-                if Author.has_date_of_birth(key,value):
+                if model.has_date_of_birth(key,value):
                     value = model.has_date_of_birth(key,value)                     
                 qry = qry.filter(column == value)   
     return qry 
